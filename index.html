@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello jeedkun!</title>
+    </head>
+    <body>
+        <p>Hello World!</p>
+        <div>
+            <canvas id="canvas">
+                jeedkun
+            </canvas>
+        </div>
+        <script>
+            'use strict';
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const Line = canvas.getContext('2d');
+            const [ WIDTH, HEIGHT ] = [640, 480];
+
+            function main(){
+                [canvas.WIDTH, canvas.HEIGHT] = [WIDTH, HEIGHT];
+                ctx.fillStyle = 'red';
+                ctx.fillRect(0, 0, WIDTH, HEIGHT);
+            }
+
+            var Line_blue = function(){
+                Line.strokeStyle = 'blue';
+                Line.lineWidth = 10;
+                Line.beginPath();
+                Line.moveTo(0,0);
+                Line.lineTo(WIDTH,HEIGHT);
+                Line.stroke();
+            }
+
+            var view_jeedkun = function(x,y){
+                const img = new Image();
+                img.src = 'img/jeed.png';
+                img.onload = () => {
+                    ctx.drawImage(img,x,y);
+                }
+            }
+
+            main();
+            Line_blue();
+            view_jeedkun(50,50);
+        </script>
+    </body>
+</html>
