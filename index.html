@@ -13,13 +13,21 @@
         </div>
         <script>
             'use strict';
+
+            class jeedkun{
+                constructor(x,y,sp){
+                    this.pos = { x, y}
+                    this.speed = sp
+                }
+            }
+
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
             const Line = canvas.getContext('2d');
             const [ WIDTH, HEIGHT ] = [640, 480];
 
             function main(){
-                [canvas.WIDTH, canvas.HEIGHT] = [WIDTH, HEIGHT];
+                [canvas.width, canvas.height] = [WIDTH, HEIGHT];
                 ctx.fillStyle = 'red';
                 ctx.fillRect(0, 0, WIDTH, HEIGHT);
             }
@@ -44,6 +52,8 @@
             main();
             Line_blue();
             view_jeedkun(50,50);
+            view_jeedkun(100,100);
+            view_jeedkun(150,150);
         </script>
     </body>
 </html>
