@@ -25,6 +25,7 @@
             const ctx = canvas.getContext('2d');
             const Line = canvas.getContext('2d');
             const [ WIDTH, HEIGHT ] = [640, 480];
+            const audio = new Audio("mp3/jeedvoice.mp3");
 
             function main(){
                 [canvas.width, canvas.height] = [WIDTH, HEIGHT];
@@ -54,6 +55,7 @@
             view_jeedkun(50,50);
             view_jeedkun(100,100);
             view_jeedkun(150,150);
+            audio.play();
         </script>
     </body>
 </html>
